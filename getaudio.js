@@ -17,6 +17,8 @@ const getaudio = async (req, res) => {
         const audioData = await axios.get(data.downloadUrl, { responseType: 'arraybuffer' });
         fs.writeFileSync(path.join(__dirname, 'audio.mp3'), audioData.data);
 
+        console.log("audio extracted from link")
+
         //  converting audio into text
 
         const client = new AssemblyAI({

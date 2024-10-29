@@ -34,7 +34,7 @@ const getaudio = async (req, res) => {
         
         fs.unlink("audio.mp3", (e) => { console.log(e) })
 
-        console.log("audio to text done ")
+        console.log("audio to text done ")   
 
         res.send(finaltext)
 
